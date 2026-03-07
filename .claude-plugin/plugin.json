@@ -4,5 +4,8 @@
   "version": "1.0.0",
   "author": {
     "name": "Yevhenii Kozhevin"
-  }
+  },
+  "repository": "https://github.com/DexLuthor/english-claude-plugin",
+  "license": "MIT",
+  "keywords": ["english", "grammar", "language", "writing"]
 }
