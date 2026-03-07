@@ -29,7 +29,7 @@ The agent body is the system prompt. `agents/fix-grammar.md` does two things in 
 
 ## Language profile format
 
-`~/.claude/english-profile.md` has three sections: `## Weaknesses`, `## Strengths`, `## Last updated`. One pattern per line, max 15 entries each (oldest removed when over the limit).
+`~/.claude/english-profile.md` has a `## Weaknesses` section. Each weakness line ends with a score in parentheses, e.g. `- Missing articles before nouns (3)`. The score increments each time the same mistake is observed. Max 15 entries — when over the limit, the entry with the lowest score is removed.
 
 ## Installing / testing locally
 
