@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-A Claude Code plugin that provides English grammar tools. It exposes two slash commands (`/english:fix-grammar` and `/english:english-insights`) and one agent (`fix-grammar`) that silently maintains a per-user language profile at `~/.claude/english-profile.md`.
+A Claude Code plugin that provides English grammar tools. It exposes three slash commands (`/english:fix-grammar`, `/english:insights`, and `/english:reset-history`) and two agents (`fix-grammar` and `update-profile`) that silently maintain a per-user language profile at `~/.claude/english-profile.md`.
 
 ## Plugin structure
 
@@ -16,7 +16,7 @@ A Claude Code plugin that provides English grammar tools. It exposes two slash c
 
 Each file in `commands/` is a slash command. The frontmatter `description` field is what appears in the command picker. `$ARGUMENTS` is replaced with whatever the user passes after the command name.
 
-`commands/fix-grammar.md` is a thin prompt — it delegates the actual grammar fix + profile update to `agents/fix-grammar.md` via the skill system.
+`commands/fix-grammar.md` is a thin prompt — it delegates grammar correction to the `fix-grammar` agent and profile updating to the `update-profile` agent.
 
 ## How agents work
 
@@ -25,7 +25,7 @@ Each file in `agents/` defines an agent. The frontmatter declares:
 - `tools` — comma-separated list of tools the agent can call (e.g. `Read, Write`)
 - `color` — UI color hint
 
-The agent body is the system prompt. `agents/fix-grammar.md` does two things in sequence: outputs corrected text, then silently reads/writes `~/.claude/english-profile.md`.
+The agent body is the system prompt. `agents/fix-grammar.md` corrects grammar and outputs the result. `agents/update-profile.md` silently analyzes the original text for error patterns and reads/writes `~/.claude/english-profile.md`.
 
 ## Language profile format
 

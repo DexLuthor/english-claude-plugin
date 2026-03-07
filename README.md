@@ -23,7 +23,7 @@ claude --plugin-dir /path/to/english-claude-plugin
 
 ### `/english:fix-grammar <text>`
 
-Corrects grammar in the given text. Runs on Haiku for speed. After each correction, silently updates your language profile at `~/.claude/english-profile.md`.
+Corrects grammar in the given text. After each correction, silently updates your language profile at `~/.claude/english-profile.md`.
 
 ```
 /english:fix-grammar i dont know what are you talking about
@@ -34,15 +34,23 @@ Rules applied:
 - Does **not** change meaning, tone, or style
 - Does **not** replace or remove slang or colloquialisms
 
-### `/english:english-insights`
+### `/english:insights`
 
-Generates a report from your accumulated language profile — weaknesses ranked by frequency, strengths, deeper patterns, and a single focus area recommendation.
+Generates a report from your accumulated language profile — weaknesses ranked by frequency, deeper patterns, and a single focus area recommendation.
 
 ```
-/english:english-insights
+/english:insights
 ```
 
 > Requires at least a few `/english:fix-grammar` uses to build up the profile.
+
+### `/english:reset-history`
+
+Clears your English profile (weaknesses history). Useful if you want to start tracking from scratch.
+
+```
+/english:reset-history
+```
 
 ## Language profile
 
