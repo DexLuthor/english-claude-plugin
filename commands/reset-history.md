@@ -1,5 +1,6 @@
 ---
 description: Clear your English profile (weaknesses and strengths memory)
+disable-model-invocation: true
 ---
 
 Read the file at `~/.claude/english-profile.md`.
