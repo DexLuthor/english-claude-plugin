@@ -1,0 +1,19 @@
+{
+  "name": "english-claude-plugin",
+  "description": "This plugins provides a few commands to correct grammar in your text. Over time it can show you what are the most common mistakes, so you can learn from it.",
+  "owner": {
+    "name": "Yevhenii Kozhevin"
+  },
+  "plugins": [
+    {
+      "name": "english",
+      "description": "This plugin provides a few commands to correct grammar in your text. Over time it can show you what are the most common mistakes, so you can learn from it.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Yevhenii Kozhevin"
+      },
+      "source": ".",
+      "category": "productivity"
+    }
+  ]
+}

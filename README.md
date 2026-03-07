@@ -1,6 +1,6 @@
 # English Plugin for Claude Code
 
-Tracks your English grammar patterns and fixes grammar on demand — without changing your meaning, tone, or slang.
+This plugins provides a few commands to correct grammar in your text. Over time it can show you what are the most common mistakes, so you can learn from it.
 
 ## Installation
 
