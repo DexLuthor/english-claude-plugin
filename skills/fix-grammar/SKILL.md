@@ -14,7 +14,6 @@ Before obtaining the text, check `$ARGUMENTS` for the following optional flags a
 **Tone flags** (at most one):
 - `--formal` — formal tone
 - `--casual` — casual tone
-- `--business` — business tone
 
 **Strictness flags** (at most one):
 - `--strict` — strict mode
@@ -53,7 +52,6 @@ If the clipboard is also empty or the clipboard command fails, respond with exac
 If a tone flag was detected, tell the fix-grammar agent which tone to apply:
 - `--formal`: Apply formal tone rules
 - `--casual`: Apply casual tone rules
-- `--business`: Apply business tone rules
 
 If no tone flag was provided, do not mention tone to the agent — it will use its default behavior (fix grammar only, preserve original style).
 
